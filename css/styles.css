@@ -1,0 +1,126 @@
+:root {
+  --bright-red: hsl(12, 88%, 59%);
+  --dark-blue: hsl(228, 39%, 23%);
+
+  --dark-grayish-blue: hsl(227, 12%, 61%);
+  --very-dark-blue: hsl(233, 12%, 13%);
+  --very--pale-red: hsl(13, 100%, 96%);
+  --very-light-gray: hsl(0, 0%, 98%);
+}
+
+/* ----- RESET ----- */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ----- UTILITY ----- */
+.px-2 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.container {
+  max-width: 1440px;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.mb-1 {
+  margin-bottom: 1.5rem;
+}
+.mt-4 {
+  margin-bottom: 4rem;
+}
+.mb-4 {
+  margin-bottom: 4rem;
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.btn.btn-round {
+  padding: 0.8rem 2rem;
+  border-radius: 2rem;
+}
+
+.btn-orange {
+  background-color: var(--bright-red);
+  color: var(--very-light-gray);
+}
+
+.heading {
+  color: var(--dark-blue);
+}
+
+.text-gray {
+  color: var(--dark-grayish-blue);
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ----- PHONE SCREEN ------  */
+body {
+  font-size: 1rem;
+  font-family: "Be Vietnam", sans-serif;
+  line-height: 1.7;
+}
+
+/* --- HEADER --- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+nav,
+.header__btn {
+  display: none;
+}
+
+/* --- HERO  --- */
+.hero {
+  text-align: center;
+}
+
+.hero__heading {
+  font-size: 40px;
+}
+
+/* --- FOOTER  --- */
+footer {
+  background-color: var(--very-dark-blue);
+}
+
+/* ----- BIG SCREEN -----  */
+@media screen and (min-width: 768px) {
+  nav,
+  .header__btn {
+    display: block;
+  }
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  nav ul li + li {
+    margin-left: 1rem;
+  }
+}

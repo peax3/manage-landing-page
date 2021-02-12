@@ -12,6 +12,14 @@
       href="./images/favicon-32x32.png"
     />
 
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/styles.css" />
+
     <title>Frontend Mentor | Manage landing page</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -27,8 +35,10 @@
   </head>
   <body>
     <!-- /---------- HEADER START ------------------------/ -->
-    <header>
-      <div class="logo header__logo">header logo here</div>
+    <header class="container mx-auto px-2">
+      <div class="logo header__logo">
+        <img src="./images/logo.svg" alt="logo" />
+      </div>
       <nav>
         <ul class="nav__links">
           <li class="nav__link"><a href="#">Pricing</a></li>
@@ -38,31 +48,45 @@
           <li class="nav__link"><a href="#">Community</a></li>
         </ul>
       </nav>
+      <div class="hamburger">
+        <button type="button" class="btn">
+          <img src="./images/icon-hamburger.svg" alt="hamburger" />
+        </button>
+      </div>
       <div class="header__btn">
-        <button type="button">Get Started</button>
+        <button type="button" class="btn btn-round">Get Started</button>
       </div>
     </header>
     <!-- /---------- HEADER END ------------------------/ -->
 
     <!-- /---------- HERO START ------------------------/ -->
-    <section class="hero">
+    <section class="hero container mx-auto px-2 mb-4">
+      <div class="hero__img">
+        <img src="./images/illustration-intro.svg" alt="illustration-intro" />
+      </div>
       <div class="hero__content">
-        <h1 class="hero__heading">
+        <h1 class="hero__heading heading mb-1">
           Bring everyone together to build better products.
         </h1>
-        <p class="hero_paragraph">
+        <p class="hero__paragraph text-gray mb-1">
           Manage makes it simple for software teams to plan day-to-day tasks
           while keeping the larger team goals in view.
         </p>
+        <div class="hero__btn">
+          <button type="button" class="btn btn-round btn-orange">
+            Get Started
+          </button>
+        </div>
       </div>
-      <div class="hero__img">hero image here</div>
     </section>
     <!-- /---------- HERO END ------------------------/ -->
 
     <!-- /---------- SERVICES START ------------------------/ -->
     <section class="services">
       <div class="services__about">
-        <h2 class="services__heading">What’s different about Manage?</h2>
+        <h2 class="services__heading heading">
+          What’s different about Manage?
+        </h2>
         <p class="services__paragraph">
           Manage provides all the functionality your team needs, without the
           complexity. Our software is tailor-made for modern digital product
@@ -71,9 +95,9 @@
       </div>
       <div class="services__items">
         <div class="services__item">
-          <div class="services__item-heading">
+          <div class="services__item-heading heading">
             <span>01</span>
-            <h4>Track company-wide progress</h4>
+            <h4 class="heading">Track company-wide progress</h4>
           </div>
           <div class="services__item-paragraph">
             See how your day-to-day tasks fit into the wider vision. Go from
@@ -82,9 +106,9 @@
           </div>
         </div>
         <div class="services__item">
-          <div class="services__item-heading">
+          <div class="services__item-heading heading">
             <span>02</span>
-            <h4>Advanced built-in reports</h4>
+            <h4 class="heading">Advanced built-in reports</h4>
           </div>
           <div class="services__item-paragraph">
             Set internal delivery estimates and track progress toward company
@@ -93,9 +117,9 @@
           </div>
         </div>
         <div class="services__item">
-          <div class="services__item-heading">
+          <div class="services__item-heading heading">
             <span>03</span>
-            <h4>Everything you need in one place</h4>
+            <h4 class="heading">Everything you need in one place</h4>
           </div>
           <div class="services__item-paragraph">
             Stop jumping from one service to another to communicate, store
@@ -109,7 +133,7 @@
 
     <!-- /---------- TESTIMONIALS START ------------------------/ -->
     <section class="testimonial">
-      <h2 class="testimonial__heading">What they’ve said</h2>
+      <h2 class="testimonial__heading heading">What they’ve said</h2>
 
       <div class="testimonial__card-items">
         <div class="testimonial__card-item">
@@ -117,7 +141,7 @@
             <img src="" alt="profile pic" />
           </div>
           <div class="testimonial__card-content">
-            <h4>Anisha Li</h4>
+            <h4 class="heading">Anisha Li</h4>
             <p>
               “Manage has supercharged our team’s workflow. The ability to
               maintain visibility on larger milestones at all times keeps
@@ -130,7 +154,7 @@
             <img src="" alt="profile pic" />
           </div>
           <div class="testimonial__card-content">
-            <h4>Ali Bravo</h4>
+            <h4 class="heading">Ali Bravo</h4>
             <p>
               “We have been able to cancel so many other subscriptions since
               using Manage. There is no more cross-channel confusion and
@@ -143,7 +167,7 @@
             <img src="" alt="profile pic" />
           </div>
           <div class="testimonial__card-content">
-            <h4>Richard Watts</h4>
+            <h4 class="heading">Richard Watts</h4>
             <p>
               “Manage allows us to provide structure and process. It keeps us
               organized and focused. I can’t stop recommending them to everyone
@@ -156,7 +180,7 @@
             <img src="" alt="profile pic" />
           </div>
           <div class="testimonial__card-content">
-            <h4>Shanai Gough</h4>
+            <h4 class="heading">Shanai Gough</h4>
             <p>
               “Their software allows us to track, manage and collaborate on our
               projects from anywhere. It keeps the whole team in-sync without
@@ -173,16 +197,18 @@
 
     <!-- /---------- CALL TO ACTION START ------------------------/ -->
     <section class="cta">
-      <h2 class="cta__heading">Simplify how your team works today.</h2>
+      <h1 class="cta__heading heading">Simplify how your team works today.</h1>
       <div class="cta__btn">
-        <button type="button">Get Started</button>
+        <button type="button" class="btn btn-round">Get Started</button>
       </div>
     </section>
     <!-- /---------- CALL TO ACTION START ------------------------/ -->
 
     <!-- /---------- FOOTER START ------------------------/ -->
     <footer>
-      <div class="footer__logo">footer_logo</div>
+      <div class="footer__logo">
+        <img src="./images/logo.svg" alt="logo" />
+      </div>
       <div class="footer__links">
         <ul class="footer__links">
           <li><a href="#">Home</a></li>
@@ -197,9 +223,31 @@
         </ul>
       </div>
       <ul class="socials__links">
-        <li class="socials__link"><a href="#"></a></li>
-        <li class="socials__link"><a href="#"></a></li>
-        <li class="socials__link"><a href="#"></a></li>
+        <li class="socials__link">
+          <a href="#">
+            <img src="./images/icon-facebook.svg" alt="icon-facebook" />
+          </a>
+        </li>
+        <li class="socials__link">
+          <a href="#">
+            <img src="./images/icon-youtube.svg" alt="icon-youtube" />
+          </a>
+        </li>
+        <li class="socials__link">
+          <a href="#">
+            <img src="./images/icon-twitter.svg" alt="icon-twitter" />
+          </a>
+        </li>
+        <li class="socials__link">
+          <a href="#">
+            <img src="./images/icon-pinterest.svg" alt="icon-pinterest" />
+          </a>
+        </li>
+        <li class="socials__link">
+          <a href="#">
+            <img src="./images/icon-instagram.svg" alt="icon-instagram" />
+          </a>
+        </li>
       </ul>
       <form class="message">
         <input
@@ -208,7 +256,7 @@
           id="updates"
           placeholder="Updates in your inbox..."
         />
-        <button type="submit">Go</button>
+        <button type="submit" class="btn btn-round">Go</button>
       </form>
       <div class="copyright">
         <small>Copyright 2020. All Rights Reserved</small>
