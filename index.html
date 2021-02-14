@@ -39,18 +39,31 @@
       <div class="logo header__logo">
         <img src="./images/logo.svg" alt="logo" />
       </div>
-      <nav>
-        <ul class="nav__links">
-          <li class="nav__link"><a href="#">Pricing</a></li>
-          <li class="nav__link"><a href="#">Product</a></li>
-          <li class="nav__link"><a href="#">About Us</a></li>
-          <li class="nav__link"><a href="#">Careers</a></li>
-          <li class="nav__link"><a href="#">Community</a></li>
+      <nav class="desktop-nav">
+        <ul class="desktop-nav__links">
+          <li class="desktop-nav__link"><a href="#">Pricing</a></li>
+          <li class="desktop-nav__link"><a href="#">Product</a></li>
+          <li class="desktop-nav__link"><a href="#">About Us</a></li>
+          <li class="desktop-nav__link"><a href="#">Careers</a></li>
+          <li class="desktop-nav__link"><a href="#">Community</a></li>
         </ul>
       </nav>
+      <nav class="mobile-nav">
+        <ul class="mobile-nav__links">
+          <li class="mobile-nav__link"><a href="#">Pricing</a></li>
+          <li class="mobile-nav__link"><a href="#">Product</a></li>
+          <li class="mobile-nav__link"><a href="#">About Us</a></li>
+          <li class="mobile-nav__link"><a href="#">Careers</a></li>
+          <li class="mobile-nav__link"><a href="#">Community</a></li>
+        </ul>
+      </nav>
+      <div class="backdrop"></div>
       <div class="hamburger">
-        <button type="button" class="btn">
+        <button type="button" class="btn hamburger__open">
           <img src="./images/icon-hamburger.svg" alt="hamburger" />
+        </button>
+        <button type="button" class="btn hamburger__close">
+          <img src="./images/icon-close.svg" alt="hamburger" />
         </button>
       </div>
       <div class="header__btn">
@@ -62,6 +75,7 @@
         </button>
       </div>
     </header>
+
     <!-- /---------- HEADER END ------------------------/ -->
 
     <!-- /---------- HERO START ------------------------/ -->
@@ -143,8 +157,8 @@
     <section class="testimonial mx-auto container">
       <h2 class="testimonial__heading heading">What they’ve said</h2>
 
-      <div class="testimonial__card-items mb-3">
-        <div class="testimonial__card-item">
+      <div class="testimonial__card-items mb-3 slides-container">
+        <div class="testimonial__card-item slide fade">
           <div class="testimonail__card-image">
             <img src="./images/avatar-anisha.png" alt="profile pic" />
           </div>
@@ -157,7 +171,7 @@
             </p>
           </div>
         </div>
-        <div class="testimonial__card-item">
+        <div class="testimonial__card-item slide fade">
           <div class="testimonail__card-image">
             <img src="./images/avatar-ali.png" alt="profile pic" />
           </div>
@@ -170,7 +184,7 @@
             </p>
           </div>
         </div>
-        <div class="testimonial__card-item">
+        <div class="testimonial__card-item slide fade">
           <div class="testimonail__card-image">
             <img src="./images/avatar-richard.png" alt="profile pic" />
           </div>
@@ -183,7 +197,7 @@
             </p>
           </div>
         </div>
-        <div class="testimonial__card-item">
+        <div class="testimonial__card-item slide fade">
           <div class="testimonail__card-image">
             <img src="./images/avatar-shanai.png" alt="profile pic" />
           </div>
@@ -197,10 +211,16 @@
           </div>
         </div>
         <!-- next and previous button -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <a class="btn prev">&#10094;</a>
+        <a class="btn next">&#10095;</a>
       </div>
-      <div class="testimonail__btn">
+      <div class="dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      <div class="testimonail__btn-container">
         <button
           type="button"
           class="btn btn-round btn-orange btn-orange-shadow btn-animateY"
