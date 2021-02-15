@@ -48,19 +48,13 @@ const mobileNav = document.querySelector(".mobile-nav");
 const backdrop = document.querySelector(".backdrop");
 
 hamburgerOpen.addEventListener("click", () => {
-  console.log("hamOpen");
   mobileNav.classList.add("show");
   backdrop.classList.add("show");
   hamburgerOpen.classList.add("close");
   hamburgerClose.classList.add("show");
 });
 
-backdrop.addEventListener("click", () => {
-  console.log("back");
-});
-
 hamburgerClose.addEventListener("click", () => {
-  console.log("hamclose");
   mobileNav.classList.remove("show");
   backdrop.classList.remove("show");
   hamburgerOpen.classList.remove("close");
